@@ -1,0 +1,23 @@
+.buyNow{
+  transition: transform .45s cubic-bezier(.785, .135, .15, .86),-webkit-transform .45s cubic-bezier(.785, .135, .15, .86);
+  position:relative;
+  overflow:hidden;
+}
+.buyNow::before {
+    content: "";
+     
+    transition: transform .45s cubic-bezier(.785, .135, .15, .86),-webkit-transform .45s cubic-bezier(.785, .135, .15, .86);
+    background: #007fee;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1; 
+      transform-origin: left center; 
+    transform: scale(1,1);
+}
+.buyNow:hover::before {
+      transform-origin: right center; 
+    transform: scale(0,1);
+}
